@@ -1,0 +1,57 @@
+html {
+    font-size: 25px;
+    font-family: arial;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px;
+    border: solid 2px #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #bbb;
+    color: black;
+}
+
+/* checkbox which triggering popup */
+
+#whoAmIPopup:checked~#whoAmI, #HowToPlayPopup:checked~#HowToPlay {
+    display: block;
+}
+
+/* checkbox of start playing - 
+ trigger by pressing "save the world" button */
+
+#toggleGame:checked {
+    ~.game-menu-frame {
+        display: none;
+    }
+    ~.game-frame {
+        display: block;
+    }
+}
+
+/* hide popup and game frame*/
+
+#whoAmI, #HowToPlay, .game-frame {
+    display: none;
+}
+
+.game-menu-frame {
+    background: yellow;
+    border: solid 2px #000;
+}
+
+.game-frame {
+    background: green;
+    padding: 50px;
+    color: #fff;
+    border: solid 2px #000;
+}
+
+.popup {
+    background: blue;
+    padding: 50px;
+    color: #fff;
+    border: solid 2px #000;
+}
