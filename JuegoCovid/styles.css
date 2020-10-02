@@ -22,15 +22,13 @@ html {
 /* checkbox of start playing - 
  trigger by pressing "save the world" button */
 
-#toggleGame:checked
-    ~.game-menu-frame {
-        display: none;
-    } 
+#toggleGame:checked~.game-menu-frame {
+    display: none;
+}
 
-#toggleGame:checked
-    ~.game-frame {
-        display: block;
-    }
+#toggleGame:checked~.game-frame {
+    display: block;
+}
 
 /* hide popup and game frame*/
 

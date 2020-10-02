@@ -1,3 +1,7 @@
+/* Es mejor separar los archivos de cada elemento principal*/
+
+/* Aplica a todo el objeto coronameme */
+
 .corona-virus {
     position: relative;
     top: 40px;
@@ -19,6 +23,8 @@
     background-color: #fff;
 }
 
+/* ::before es para insertar estilos antes de la etiqueta */
+
 [class*="eye"]::before {
     content: "";
     position: absolute;
@@ -29,6 +35,8 @@
     background-color: #000;
     border-radius: 50%;
 }
+
+/* ::before es para insertar estilos después de la etiqueta */
 
 [class*="eye"]::after {
     content: "";
@@ -93,52 +101,176 @@
 
 /*hairs location*/
 
+/* dentro de la clase hair se puede dar como parametro un keyframe para animar cada sección */
+
 .hair1 {
-    transform: rotateZ(30deg) translateY(-65px);
+    animation-name: hairmove1;
+    animation-delay: -2ms;
 }
 
 .hair2 {
-    transform: rotateZ(60deg) translateY(-65px);
+    animation-name: hairmove2;
+    animation-delay: -110ms;
 }
 
 .hair3 {
-    transform: rotateZ(90deg) translateY(-65px);
+    animation-name: hairmove3;
+    animation-delay: -150ms;
 }
 
 .hair4 {
-    transform: rotateZ(120deg) translateY(-65px);
+    animation-name: hairmove4;
+    animation-delay: -10ms;
 }
 
 .hair5 {
-    transform: rotateZ(150deg) translateY(-65px);
+    animation-name: hairmove5;
+    animation-delay: -320ms;
 }
 
 .hair6 {
-    transform: rotateZ(180deg) translateY(-65px);
+    animation-name: hairmove6;
+    animation-delay: -50ms;
 }
 
 .hair7 {
-    transform: rotateZ(210deg) translateY(-65px);
+    animation-name: hairmove7;
+    animation-delay: -450ms;
 }
 
 .hair8 {
-    transform: rotateZ(240deg) translateY(-65px);
+    animation-name: hairmove8;
+    animation-delay: -30ms;
 }
 
 .hair9 {
-    transform: rotateZ(270deg) translateY(-65px);
+    animation-name: hairmove9;
+    animation-delay: -40ms;
 }
 
 .hair10 {
-    transform: rotateZ(300deg) translateY(-65px);
+    animation-name: hairmove10;
+    animation-delay: -100ms;
 }
 
 .hair11 {
-    transform: rotateZ(330deg) translateY(-65px);
+    animation-name: hairmove11;
+    animation-delay: -760ms;
 }
 
 .hair12 {
-    transform: rotateZ(360deg) translateY(-65px);
+    animation-name: hairmove12;
+    animation-delay: -620ms;
+}
+
+/* Con @keyframes se organizan puntos para interpolar posiciones generando animaciones */
+
+@keyframes hairmove1 {
+    from {
+        transform: rotateZ(30deg) translateY(-55px);
+    }
+    to {
+        transform: rotateZ(20deg) translateY(-65px);
+    }
+}
+
+@keyframes hairmove2 {
+    from {
+        transform: rotateZ(60deg) translateY(-50px);
+    }
+    to {
+        transform: rotateZ(64deg) translateY(-65px);
+    }
+}
+
+@keyframes hairmove3 {
+    from {
+        transform: rotateZ(89deg) translateY(-60px);
+    }
+    to {
+        transform: rotateZ(91deg) translateY(-65px);
+    }
+}
+
+@keyframes hairmove4 {
+    from {
+        transform: rotateZ(122deg) translateY(-53px);
+    }
+    to {
+        transform: rotateZ(110deg) translateY(-65px);
+    }
+}
+
+@keyframes hairmove5 {
+    from {
+        transform: rotateZ(150deg) translateY(-57px);
+    }
+    to {
+        transform: rotateZ(150deg) translateY(-64px);
+    }
+}
+
+@keyframes hairmove6 {
+    from {
+        transform: rotateZ(180deg) translateY(-61px);
+    }
+    to {
+        transform: rotateZ(180deg) translateY(-65px);
+    }
+}
+
+@keyframes hairmove7 {
+    from {
+        transform: rotateZ(210deg) translateY(-60px);
+    }
+    to {
+        transform: rotateZ(210deg) translateY(-65px);
+    }
+}
+
+@keyframes hairmove8 {
+    from {
+        transform: rotateZ(238deg) translateY(-60px);
+    }
+    to {
+        transform: rotateZ(242 deg) translateY(-69px);
+    }
+}
+
+@keyframes hairmove9 {
+    from {
+        transform: rotateZ(270deg) translateY(-60px);
+    }
+    to {
+        transform: rotateZ(270deg) translateY(-68px);
+    }
+}
+
+@keyframes hairmove10 {
+    from {
+        transform: rotateZ(300deg) translateY(-60px);
+    }
+    to {
+        transform: rotateZ(300deg) translateY(-70px);
+    }
+}
+
+@keyframes hairmove11 {
+    from {
+        transform: rotateZ(330deg) translateY(-60px);
+    }
+    to {
+        transform: rotateZ(330deg) translateY(-65px);
+    }
+}
+
+@keyframes hairmove12 {
+    from {
+        transform: rotateZ(360deg) translateY(-60px);
+    }
+    to {
+        transform: rotateZ(360deg) translateY(-65px);
+    }
 }
 
 @keyframes eyeMove {
@@ -153,27 +285,6 @@
     }
     70% {
         transform: translateX(50%) translateY(0%);
-    }
-}
-
-@keyframes hairMove {
-    0% {
-        transform: translateY(-65px);
-    }
-    20% {
-        transform: translateY(-45px);
-    }
-    45% {
-        transform: translateY(-30px);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-    65% {
-        transform: translateY(-30px);
-    }
-    80% {
-        transform: translateY(-65px);
     }
 }
 
